@@ -36,6 +36,26 @@ let list = [
     name: "Sawan",
     email: "sawan4567@gmail.com",
   },
+  {
+    id: 108,
+    name: "Ajay",
+    email: "ajay5678@gmail.com",
+  },
+  {
+    id: 109,
+    name: "Rahul",
+    email: "rahul678@gmail.com",
+  },
+  {
+    id: 110,
+    name: "Rishab",
+    email: "rishab89@gmail.com",
+  },
+  {
+    id: 11,
+    name: "Ananya",
+    email: "ananya34@gmail.com",
+  },
 ];
 
 function App() {
@@ -45,6 +65,7 @@ function App() {
   const [selectedData, setSelectedData] = useState([]);
 
   function handleItemClick(id, name, email) {
+    setSearchInput("")
     setSelectedData([...selectedData, { id: id, name: name, email: email }]);
     setDummyData(dummyData.filter((item) => item.id !== id));
   }
@@ -69,13 +90,6 @@ function App() {
         )
       );
   }
-  // document.body.addEventListener('click',()=>{
-
-  //   setOpen(false)
-  // })
-
-  // console.log(dummyData)
-
 
   return (
     <div className="mainApp">
@@ -100,7 +114,7 @@ function App() {
             type="text"
             className="inputfield"
             placeholder="Enter Some Name....."
-            // onClick={}
+            value={searchInput}
             onChange={(e) => handleSearch(e)}
             onFocus={() =>setOpen(true)}
           ></input>
