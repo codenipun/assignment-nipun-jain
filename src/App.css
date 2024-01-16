@@ -39,7 +39,9 @@
   /* border: 1px solid black; */
   width: fit-content;
   height: fit-content;
-  padding:12px 10px 2px 2px;
+  padding:2px 12px 2px 2px;
+  justify-content: center;
+  align-items: center;
   border-radius: 20px;
   background-color: rgb(214, 214, 214);
 }
@@ -72,7 +74,7 @@
   padding: 10px;
   border-radius: 10px;
   transition: all 1s ease-in-out;
-  max-height: 100px;
+  max-height: 200px;
   overflow-y: scroll;
   width: 450px;
 }
@@ -85,6 +87,9 @@
   flex-direction: row;
   gap: 10px;
   cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 0px 10px 0px;
   border-bottom: 1px solid rgb(206, 206, 206);
 }
 
@@ -110,6 +115,7 @@
 }
 
 .itemLogo{
+  display: flex;
   height: 25px;
   width: 25px;
   border-radius: 20px;
